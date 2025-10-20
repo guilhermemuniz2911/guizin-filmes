@@ -1,0 +1,71 @@
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
+            justify-content: center; /* Centraliza os cards */
+            gap: 20px; /* Espaçamento entre os cards */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .video-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Garante que a imagem se ajuste */
+            width: 300px; /* Largura padrão do card */
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+        }
+
+        .video-card a {
+            text-decoration: none; /* Remove sublinhado do link */
+            color: inherit;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #007bff; /* Cor para o título */
+        }
+
+        .video-info p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        /* Media Query para responsividade: Em telas menores, os cards ocupam a largura total */
+        @media (max-width: 650px) {
+            .video-card {
+                width: 90%; 
+            }
+        }
